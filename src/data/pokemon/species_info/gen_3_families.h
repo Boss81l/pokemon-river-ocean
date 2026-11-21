@@ -7,32 +7,31 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     [SPECIES_TREECKO] =
     {
         .baseHP        = 55,
-        .baseAttack    = 60,
-        .baseDefense   = 65,
-        .baseSpeed     = 35,
+        .baseAttack    = 62,
+        .baseDefense   = 60,
+        .baseSpeed     = 40,
         .baseSpAttack  = 45,
-        .baseSpDefense = 55,
+        .baseSpDefense = 56,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 62 : 65,
-        .evYield_Speed = 1,
+        .expYield = 62,
+        .evYield_Attack = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_UNBURDEN },
-        .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Tongchang"),
-        .cryId = CRY_TREECKO,
-        .natDexNum = NATIONAL_DEX_TREECKO,
-        .categoryName = _("Banana Calf"),
-        .height = 9,
-        .weight = 185,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS, EGG_GROUP_FIELD),
+        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_WATER_ABSORB },
+        .speciesName = _("Musalf"),
+        .categoryName = _("Tender Leaf"),
+        .height = 5,
+        .weight = 115,
         .description = COMPOUND_STRING(
-            "Its broad leaf-like ears absorb sunlight\n"
-            "to generate energy. It stomps the ground\n"
-            "to send shockwaves through tree roots."),
+            "Its trunk is a rolled tender banana\n"
+            "leaf. When heavy rain falls in the\n"
+            "jungle, it folds its large leaf ears\n"
+            "around its body to stay dry and warm."),
+
         .pokemonScale = 541,
         .pokemonOffset = 19,
         .trainerScale = 256,
@@ -76,34 +75,32 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_GROVYLE] =
     {
-        .baseHP        = 50,
-        .baseAttack    = 65,
-        .baseDefense   = 45,
-        .baseSpeed     = 95,
-        .baseSpAttack  = 85,
-        .baseSpDefense = 65,
+        .baseHP        = 72,
+        .baseAttack    = 80,
+        .baseDefense   = 78,
+        .baseSpeed     = 48,
+        .baseSpAttack  = 55,
+        .baseSpDefense = 72,
         .types = MON_TYPES(TYPE_GRASS),
         .catchRate = 45,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_5) ? 142 : 141,
-        .evYield_Speed = 2,
+        .expYield = 142,
+        .evYield_Attack = 1,
+        .evYield_Defense = 1,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_UNBURDEN },
-        .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Grovyle"),
-        .cryId = CRY_GROVYLE,
-        .natDexNum = NATIONAL_DEX_GROVYLE,
-        .categoryName = _("Wood Gecko"),
-        .height = 9,
-        .weight = 216,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS, EGG_GROUP_FIELD),
+        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_WATER_ABSORB },
+        .speciesName = _("Pachyleaf"),
+        .categoryName = _("Banana Husk"),
+        .height = 12,
+        .weight = 480,
         .description = COMPOUND_STRING(
-            "Leaves grow out of this Pokémon's body.\n"
-            "They help obscure a Grovyle from the eyes\n"
-            "of its enemies while it is in a thickly\n"
-            "overgrown forest."),
+            "It practices whipping its giant banana\n"
+            "leaf ears daily, creating drum-like\n"
+            "booms. Layered banana sheaths form a\n"
+            "waterproof armor around its body."),
         .pokemonScale = 360,
         .pokemonOffset = 5,
         .trainerScale = 256,
@@ -146,40 +143,33 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 
     [SPECIES_SCEPTILE] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 85,
-        .baseDefense   = 65,
-        .baseSpeed     = 120,
-        .baseSpAttack  = 105,
-        .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GRASS),
+        .baseHP        = 98,
+        .baseAttack    = 112,
+        .baseDefense   = 118,
+        .baseSpeed     = 50,
+        .baseSpAttack  = 65,
+        .baseSpDefense = 82,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_STEEL),
         .catchRate = 45,
-    #if P_UPDATED_EXP_YIELDS >= GEN_8
         .expYield = 265,
-    #elif P_UPDATED_EXP_YIELDS >= GEN_5
-        .expYield = 239,
-    #else
-        .expYield = 208,
-    #endif
-        .evYield_Speed = 3,
+        .evYield_Attack = 1,
+        .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_UNBURDEN },
-        .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Sceptile"),
-        .cryId = CRY_SCEPTILE,
-        .natDexNum = NATIONAL_DEX_SCEPTILE,
-        .categoryName = _("Forest"),
-        .height = 17,
-        .weight = 522,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS, EGG_GROUP_FIELD),
+        .abilities = { ABILITY_OVERGROW, ABILITY_NONE, ABILITY_WATER_ABSORB },
+        .speciesName = _("Paladusk"),
+        .categoryName = _("Frond Armor"),
+        .height = 24,
+        .weight = 2850,
         .description = COMPOUND_STRING(
-            "In the jungle, its power is without equal.\n"
-            "This Pokémon carefully grows trees and\n"
-            "plants. It regulates its body temperature\n"
-            "by basking in sunlight."),
+            "Its leaf fibers absorb minerals to\n"
+            "become as hard as steel. Folding its\n"
+            "giant ears creates an impenetrable\n"
+            "shield against floods and impacts."),
+
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 275,
@@ -222,38 +212,32 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
 #if P_MEGA_EVOLUTIONS
     [SPECIES_SCEPTILE_MEGA] =
     {
-        .baseHP        = 70,
-        .baseAttack    = 110,
-        .baseDefense   = 75,
-        .baseSpeed     = 145,
-        .baseSpAttack  = 145,
-        .baseSpDefense = 85,
-        .types = MON_TYPES(TYPE_GRASS, TYPE_DRAGON),
+                .baseHP        = 98,
+        .baseAttack    = 135,
+        .baseDefense   = 148,
+        .baseSpeed     = 45,
+        .baseSpAttack  = 85,
+        .baseSpDefense = 114,
+        .types = MON_TYPES(TYPE_GRASS, TYPE_STEEL),
         .catchRate = 45,
-        .expYield = (P_UPDATED_EXP_YIELDS >= GEN_8) ? 315 : 284,
-        .evYield_Speed = 3,
+        .expYield = 315,
+        .evYield_Attack = 1,
+        .evYield_Defense = 2,
         .genderRatio = PERCENT_FEMALE(12.5),
         .eggCycles = 20,
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_SLOW,
-        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_MONSTER, EGG_GROUP_DRAGON),
-        .abilities = { ABILITY_LIGHTNING_ROD, ABILITY_LIGHTNING_ROD, ABILITY_LIGHTNING_ROD },
-        .bodyColor = BODY_COLOR_GREEN,
-        .speciesName = _("Sceptile"),
-    #if P_MODIFIED_MEGA_CRIES
-        .cryId = CRY_SCEPTILE_MEGA,
-    #else
-        .cryId = CRY_SCEPTILE,
-    #endif // P_MODIFIED_MEGA_CRIES
-        .natDexNum = NATIONAL_DEX_SCEPTILE,
-        .categoryName = _("Forest"),
-        .height = 19,
-        .weight = 552,
+        .eggGroups = MON_EGG_GROUPS(EGG_GROUP_GRASS, EGG_GROUP_FIELD),
+        .abilities = { ABILITY_THICK_FAT, ABILITY_NONE, ABILITY_NONE },
+        .speciesName = _("Paladusk"),
+        .categoryName = _("Frond Armor"),
+        .height = 31,
+        .weight = 4200,
         .description = COMPOUND_STRING(
-            "Thanks to the power in its quick legs,\n"
-            "Mega Sceptile can be on its opponent in a\n"
-            "flash. It can cut off a portion of its tail\n"
-            "to fire it like a missile at an opponent."),
+            "Mega Evolution blooms its banana-leaf\n"
+            "armor into an unbreakable fortress.\n"
+            "Its glowing back fronds absorb sunlight\n"
+            "to generate boundless life energy."),
         .pokemonScale = 256,
         .pokemonOffset = -1,
         .trainerScale = 275,
