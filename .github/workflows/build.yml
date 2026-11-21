@@ -51,7 +51,12 @@ jobs:
         env:
           GAME_VERSION: EMERALD
         run: make -j$(nproc) -O all
-
+      - name: Upload GBA ROM
+        uses: actions/upload-artifact@v4
+        with:
+          name: pokemon-river-ocean-gba
+          path: pokeemerald.gba
+          
   build-firered:
     if: github.actor != 'allcontributors[bot]'
     runs-on: ubuntu-latest
