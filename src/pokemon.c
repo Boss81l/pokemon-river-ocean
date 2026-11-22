@@ -7015,3 +7015,4 @@ void CreateMonFromTemplate(struct Pokemon *mon, const struct PokemonTemplate *mo
     CalculateMonStats(mon);
     TryFormChange(mon, FORM_CHANGE_ITEM_HOLD, B_TRAINER_PLAYER);
 }
+// rebuild
